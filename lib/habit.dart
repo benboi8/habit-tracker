@@ -1,3 +1,4 @@
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'asset_manager.dart';
 
@@ -20,7 +21,7 @@ class Habit {
       name,
       false, // Default value for isCompleted
       "No Description", // Default value for description
-      const Icon(Icons.star), // Default value for icon
+      const Icon(Icons.star, size: 48,), // Default value for icon
       "Never", // Default value for notificationTime
       'None', // Default value for miscData
     );
@@ -30,7 +31,7 @@ class Habit {
 class HabitDetailPage extends StatefulWidget {
   final Habit habit;
 
-  const HabitDetailPage({super.key, required this.habit});
+  const HabitDetailPage({Key? key, required this.habit}) : super(key: key);
 
   @override
   HabitDetailPageState createState() => HabitDetailPageState();
@@ -48,6 +49,9 @@ class HabitDetailPageState extends State<HabitDetailPage> {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController nameController = TextEditingController(text: habit.name);
+    TextEditingController descriptionController = TextEditingController(text: habit.name);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(habit.name),
@@ -61,17 +65,44 @@ class HabitDetailPageState extends State<HabitDetailPage> {
               children: [
                 habit.icon,
                 const SizedBox(width: 8),
-                Text(habit.name, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                // Display the name as a TextField
+                Flexible(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: AppLocalizations.of(context)!.habitName,
+                    ),
+                    controller: nameController,
+                    onSubmitted: (value) {
+                      // Update the habit name when text changes
+                      setState(() {
+                        habit.name = value;
+                      });
+                    },
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 16),
-            const Text('Description:', style: TextStyle(fontWeight: FontWeight.bold)),
-            Text(habit.description),
+            Text(AppLocalizations.of(context)!.habitDescription, style: const TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(height: 16),
-            const Text('Notification Time:', style: TextStyle(fontWeight: FontWeight.bold)),
+            // Display the description as a TextField
+            TextField(
+              decoration: InputDecoration(
+                labelText: AppLocalizations.of(context)?.habitDescription,
+              ),
+              controller: descriptionController,
+              onSubmitted: (value) {
+                // Update the habit description when text changes
+                setState(() {
+                  habit.description = value;
+                });
+              },
+            ),
+            const SizedBox(height: 16),
+            Text(AppLocalizations.of(context)!.habitNotificationTime, style: const TextStyle(fontWeight: FontWeight.bold)),
             Text(habit.notificationTime),
             const SizedBox(height: 16),
-            const Text('Misc Data:', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(AppLocalizations.of(context)!.habitMiscData, style: const TextStyle(fontWeight: FontWeight.bold)),
             Text(habit.miscData),
           ],
         ),
@@ -79,6 +110,7 @@ class HabitDetailPageState extends State<HabitDetailPage> {
     );
   }
 }
+
 
 class HabitTrackerPage extends StatefulWidget {
   const HabitTrackerPage({super.key});
@@ -131,7 +163,7 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Habit Tracker'),
+        title: Text(AppLocalizations.of(context)!.appTitle),
       ),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -162,28 +194,28 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                title: const Text('Add a New Habit'),
+                title: Text(AppLocalizations.of(context)!.addNewHabit),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     TextField(
                       controller: habitController,
                       textCapitalization: TextCapitalization.sentences, // Auto-capitalize first letter
-                      decoration: const InputDecoration(
-                        hintText: 'Habit Name',
+                      decoration: InputDecoration(
+                        hintText: AppLocalizations.of(context)!.habitHint,
                       ),
                     ),
                     suggestedNames.isNotEmpty
                         ? const SizedBox(height: 8)
                         : Container(),
                     suggestedNames.isNotEmpty
-                        ? const Row(
+                        ? Row(
                             children: <Widget>[
-                              Icon(Icons.lightbulb, color: Colors.yellow),
-                              SizedBox(width: 8),
-                              Text('Suggested Habits:',
+                              const Icon(Icons.lightbulb, color: Colors.yellow),
+                              const SizedBox(width: 8),
+                              Text(AppLocalizations.of(context)!.suggestedHabits,
                                   style:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                                      const TextStyle(fontWeight: FontWeight.bold)),
                             ],
                           )
                         : Container(),
@@ -204,7 +236,7 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
                       }
                       Navigator.of(context).pop();
                     },
-                    child: const Text('Add'),
+                    child: Text(AppLocalizations.of(context)!.addHabit),
                   ),
                 ],
               );

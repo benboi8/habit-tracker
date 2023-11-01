@@ -1,0 +1,42 @@
+{
+  "habitDescription": "Description",
+  "@habitDescription":  {
+    "description":  "Habit Description"
+  },
+  "habitNotificationTime": "Notification time",
+  "@habitNotificationTime":  {
+    "description":  "Habit notification time"
+  },
+  "habitMiscData":  "Misc data",
+  "@habitMiscData":  {
+    "description":  "Habit misc data"
+  },
+  "addNewHabit": "Add new habit",
+  "@addNewHabit":  {
+    "description":  "Add a new habit"
+  },
+  "habitHint":  "Habit hint",
+  "@habitHint":  {
+    "description":  "Add a habit hint"
+  },
+  "suggestedHabits": "Suggested habits",
+  "@suggestedHabits":  {
+    "description":  "Suggested habits"
+  },
+  "addHabit":  "Add a new habit",
+  "@addHabit":  {
+    "description": "Add a habit"
+  },
+  "appTitle":  "Habit tracker daily",
+  "@appTitle": {
+    "description":  "App Title"
+  },
+  "googleSignIn": "Sign in with google",
+  "@googleSignIn":  {
+    "description":  "Sign in with google"
+  },
+  "habitName": "Habit name",
+  "@habitName":  {
+    "description":  "Habit name"
+  }
+}
