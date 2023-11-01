@@ -1,0 +1,137 @@
+{
+  "habits": [
+    {
+      "name": "Exercise",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Read",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Meditate",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Write",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Walk",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Learn",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Cook",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Yoga",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Run",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Study",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Practice Guitar",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Read News",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Practice Mindfulness",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Plan Your Day",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Cook a New Recipe",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Take a Nature Walk",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Watch a Documentary",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Call a Friend",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    },
+    {
+      "name": "Write in a Journal",
+      "icon": "unknown",
+      "description": "unknown",
+      "notificationTime": "unknown",
+      "miscData": "unknown"
+    }
+  ]
+}
