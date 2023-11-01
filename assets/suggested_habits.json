@@ -2,136 +2,139 @@
   "habits": [
     {
       "name": "Exercise",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Physical",
+      "description": "Engage in physical activity for a healthier lifestyle.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Read",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Reading",
+      "description": "Dive into a good book and expand your knowledge.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Meditate",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Meditation",
+      "description": "Practice mindfulness and find inner peace.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Write",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Writing",
+      "description": "Express your thoughts and creativity through writing.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Walk",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Walking",
+      "description": "Take a stroll to enjoy nature and stay active.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
-      "name": "Learn",
-      "icon": "unknown",
-      "description": "unknown",
+      "name": "Learn a new language",
+      "icon": "Language",
+      "description": "Embark on a language-learning journey.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
-      "name": "Cook",
-      "icon": "unknown",
-      "description": "unknown",
+      "name": "Cook a new meal",
+      "icon": "Cooking",
+      "description": "Explore culinary adventures in your kitchen.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Yoga",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Yoga",
+      "description": "Improve flexibility and mental well-being through yoga.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Run",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Running",
+      "description": "Go for a run to boost your cardiovascular fitness.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
-    },
-    {
-      "name": "Study",
-      "icon": "unknown",
-      "description": "unknown",
-      "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Practice Guitar",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Music",
+      "description": "Strum your guitar strings and make music.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Read News",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "News",
+      "description": "Stay updated with the latest news and current events.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Practice Mindfulness",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Mindfulness",
+      "description": "Cultivate mindfulness for better mental health.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Plan Your Day",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Planning",
+      "description": "Organize your tasks and make the most of your day.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
-    },
-    {
-      "name": "Cook a New Recipe",
-      "icon": "unknown",
-      "description": "unknown",
-      "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Take a Nature Walk",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Nature",
+      "description": "Connect with nature on a peaceful walk.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Watch a Documentary",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Documentary",
+      "description": "Expand your knowledge with interesting documentaries.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Call a Friend",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Friend",
+      "description": "Stay connected with friends and loved ones.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     },
     {
       "name": "Write in a Journal",
-      "icon": "unknown",
-      "description": "unknown",
+      "icon": "Journaling",
+      "description": "Reflect on your thoughts and experiences in a journal.",
       "notificationTime": "unknown",
-      "miscData": "unknown"
+      "miscData": "unknown",
+      "isCompleted": false
     }
   ]
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'asset_manager.dart';
 
 class Habit {
@@ -28,7 +27,58 @@ class Habit {
   }
 }
 
+class HabitDetailPage extends StatefulWidget {
+  final Habit habit;
 
+  const HabitDetailPage({super.key, required this.habit});
+
+  @override
+  HabitDetailPageState createState() => HabitDetailPageState();
+}
+
+class HabitDetailPageState extends State<HabitDetailPage> {
+  late final Habit habit;
+
+  @override
+  void initState() {
+    super.initState();
+
+    habit = widget.habit;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(habit.name),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                habit.icon,
+                const SizedBox(width: 8),
+                Text(habit.name, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              ],
+            ),
+            const SizedBox(height: 16),
+            const Text('Description:', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(habit.description),
+            const SizedBox(height: 16),
+            const Text('Notification Time:', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(habit.notificationTime),
+            const SizedBox(height: 16),
+            const Text('Misc Data:', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(habit.miscData),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class HabitTrackerPage extends StatefulWidget {
   const HabitTrackerPage({super.key});
@@ -46,23 +96,18 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
     });
   }
 
-  Future<void> _showHabitDetailsDialog(Habit habit) async {
-    return showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(habit.name),
-          content: Text(habit.description),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text('Close'),
-            ),
-          ],
-        );
-      },
+  void _addSuggestedHabit(String name) {
+    setState(() {
+      Habit.habits.add(AssetManager.suggestedHabits.firstWhere((element) => element.name == name));
+      Navigator.of(context).pop();
+    });
+  }
+
+  void _showHabitDetails(Habit habit) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => HabitDetailPage(habit: habit),
+      ),
     );
   }
 
@@ -76,7 +121,7 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
           ActionChip(
             label: Text(name),
             onPressed: () {
-              habitController.text = name;
+              _addSuggestedHabit(name);
             },
           ),
         );
@@ -97,15 +142,13 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
           final habit = Habit.habits[index];
           return GestureDetector(
             onTap: () {
-              _showHabitDetailsDialog(habit);
+              _showHabitDetails(habit);
             },
             child: Card(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(Icons.star,
-                      size: 48,
-                      color: habit.isCompleted ? Colors.green : Colors.grey),
+                  habit.icon,
                   Text(habit.name, style: const TextStyle(fontSize: 16)),
                 ],
               ),
@@ -125,8 +168,7 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
                   children: <Widget>[
                     TextField(
                       controller: habitController,
-                      textCapitalization: TextCapitalization
-                          .sentences, // Auto-capitalize first letter
+                      textCapitalization: TextCapitalization.sentences, // Auto-capitalize first letter
                       decoration: const InputDecoration(
                         hintText: 'Habit Name',
                       ),
@@ -139,7 +181,7 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
                             children: <Widget>[
                               Icon(Icons.lightbulb, color: Colors.yellow),
                               SizedBox(width: 8),
-                              Text('Suggested Names:',
+                              Text('Suggested Habits:',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                             ],
@@ -157,8 +199,7 @@ class HabitTrackerPageState extends State<HabitTrackerPage> {
                   TextButton(
                     onPressed: () {
                       if (habitController.text.isNotEmpty) {
-                        _addHabit(
-                            habitController.text);
+                        _addHabit(habitController.text);
                         habitController.clear();
                       }
                       Navigator.of(context).pop();

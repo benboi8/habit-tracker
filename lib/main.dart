@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+
 import 'habit.dart';
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -37,7 +39,7 @@ class LoginPageState extends State<LoginPage> {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(
+                Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
                       builder: (context) => const HabitTrackerPage()),
                 );
