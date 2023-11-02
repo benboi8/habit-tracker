@@ -11,6 +11,37 @@ class AssetManager {
 
   static List<Habit> suggestedHabits = [];
 
+  static final List<IconData> habitIcons = [
+    // Todo add more icons
+    const IconData(0xe28d, fontFamily: 'MaterialIcons'),
+    Icons.menu_book,
+    Icons.spa,
+    Icons.create,
+    Icons.directions_walk,
+    Icons.language,
+    Icons.restaurant,
+    Icons.self_improvement,
+    Icons.directions_run,
+    Icons.music_note,
+    Icons.article,
+    Icons.star,
+    Icons.event_note,
+    Icons.eco,
+    Icons.movie,
+    Icons.people,
+    Icons.book,
+    Icons.star,
+    Icons.ac_unit,
+    Icons.access_alarm,
+    Icons.accessibility_new,
+    Icons.account_balance,
+    Icons.account_balance_wallet,
+    Icons.account_tree,
+    Icons.add_a_photo,
+    Icons.call,
+    Icons.water_drop,
+  ];
+
   static Future<List<dynamic>> readSuggestedHabits() async {
     try {
       final jsonString = await rootBundle.loadString(suggestedHabitsPath);

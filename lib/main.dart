@@ -12,11 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       title: "Habit tracker daily",
-      home: HabitTrackerPage(),
+      theme: ThemeData.dark(useMaterial3: true).copyWith(
+          appBarTheme: const AppBarTheme(color: Colors.deepPurple),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HabitTrackerPage(),
     );
   }
 }
